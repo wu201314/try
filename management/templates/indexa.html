@@ -1,0 +1,15 @@
+
+{%extends "base.html" %}
+{% block center %}
+<p>管理页面</p>
+	<form action="/" method="post" enctype="multipart/form-data">
+		{% csrf_token %}
+		<p >标题</p>
+		<input type="text" name="title" class="title">
+		<p>描述</p>
+		<input type="textarea" name="descipt" class="descipt">
+		<p>封面</p>
+		<input type="file" name="img" class="img"><br>
+		<input type="submit" name="submit" class="submit">
+	</form>
+{% endblock %}
